@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f8f3ec">
+  <meta name="description" content="Подтверждение присутствия на свадьбе Станислава и Алины — 3 октября 2026 года">
+
+  <title>Подтверждение присутствия — Станислав & Алина</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --ivory:#fbf8f3;
+      --paper:#fffdf9;
+      --sage:#d6dfca;
+      --sage-soft:#edf1e8;
+      --olive:#6f7e61;
+      --olive-dark:#59694d;
+      --brown:#806a5b;
+      --text:#2b2926;
+      --muted:#817b74;
+      --line:rgba(71,66,58,.14);
+      --shadow:0 18px 50px rgba(70,62,51,.10);
+      --radius:28px;
+    }
+
+    *{
+      box-sizing:border-box;
+      margin:0;
+      padding:0;
+    }
+
+    html{
+      scroll-behavior:smooth;
+    }
+
+    body{
+      font-family:'Manrope',sans-serif;
+      color:var(--text);
+      background:#e8e2da;
+      line-height:1.6;
+      -webkit-font-smoothing:antialiased;
+    }
+
+    button,input,textarea{
+      font:inherit;
+    }
+
+    button{
+      border:0;
+    }
+
+    img{
+      max-width:100%;
+      display:block;
+    }
+
+    .page{
+      width:min(100%,1500px);
+      margin:0 auto;
+      background:var(--ivory);
+      overflow:hidden;
+      box-shadow:0 0 80px rgba(0,0,0,.08);
+    }
+
+    section{
+      position:relative;
+      padding:96px 28px;
+    }
+
+    .container{
+      width:min(100%,1040px);
+      margin:0 auto;
+    }
+
+    .center{
+      text-align:center;
+    }
+
+    .eyebrow{
+      margin-bottom:12px;
+      color:var(--olive-dark);
+      font-size:12px;
+      font-weight:500;
+      letter-spacing:.28em;
+      text-transform:uppercase;
+    }
+
+    h2{
+      font-family:'Playfair Display',serif;
+      font-size:clamp(34px,4vw,52px);
+      font-weight:400;
+      line-height:1.12;
+    }
+
+    .lead{
+      max-width:680px;
+      margin:20px auto 0;
+      color:var(--muted);
+      font-size:16px;
+      font-weight:300;
+    }
+
+    .invitation{
+      min-height:100svh;
+      display:flex;
+      align-items:center;
+      background:
+        radial-gradient(circle at 10% 0%,rgba(214,223,202,.55),transparent 30%),
+        var(--ivory);
+    }
+
+    .invitation-card{
+      width:min(100%,820px);
+      margin:0 auto;
+      padding:70px 62px;
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      background:rgba(255,253,249,.88);
+      box-shadow:var(--shadow);
+      text-align:center;
+    }
+
+    .monogram{
+      width:64px;
+      height:64px;
+      margin:0 auto 24px;
+      display:grid;
+      place-items:center;
+      border:1px solid rgba(111,126,97,.34);
+      border-radius:50%;
+      color:var(--olive-dark);
+      font-family:'Playfair Display',serif;
+      font-size:20px;
+    }
+
+    .guest-greeting{
+      font-family:'Playfair Display',serif;
+      font-size:clamp(34px,5vw,52px);
+      font-weight:400;
+      line-height:1.15;
+    }
+
+    .invitation-copy{
+      max-width:630px;
+      margin:26px auto 0;
+      color:#5f5a54;
+      font-size:17px;
+      font-weight:300;
+      line-height:1.85;
+    }
+
+    .signature{
+      margin-top:30px;
+      color:var(--brown);
+      font-family:'Playfair Display',serif;
+      font-size:26px;
+      font-style:italic;
+    }
+
+    .details-section{
+      background:var(--sage-soft);
+    }
+
+    .details-card{
+      width:min(100%,860px);
+      margin:42px auto 0;
+      padding:56px 58px;
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      background:var(--paper);
+      box-shadow:var(--shadow);
+    }
+
+    .details-text{
+      max-width:680px;
+      margin:0 auto;
+      color:#5e5952;
+      font-size:16px;
+      font-weight:300;
+      line-height:1.8;
+    }
+
+    .rsvp-section{
+      background:
+        radial-gradient(circle at 90% 10%,rgba(214,223,202,.56),transparent 28%),
+        var(--ivory);
+    }
+
+    .rsvp-card{
+      width:min(100%,720px);
+      margin:42px auto 0;
+      padding:48px;
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      background:var(--paper);
+      box-shadow:var(--shadow);
+      text-align:left;
+    }
+
+    .field-label{
+      display:block;
+      margin:22px 0 10px;
+      font-size:13px;
+      font-weight:500;
+    }
+
+    .text-input,
+    textarea{
+      width:100%;
+      padding:15px 16px;
+      border:1px solid #d9d4cc;
+      border-radius:14px;
+      outline:none;
+      color:var(--text);
+      background:#fff;
+      transition:.2s ease;
+    }
+
+    textarea{
+      min-height:100px;
+      resize:vertical;
+    }
+
+    .text-input:focus,
+    textarea:focus{
+      border-color:var(--olive);
+      box-shadow:0 0 0 3px rgba(111,126,97,.10);
+    }
+
+    .choices{
+      display:grid;
+      gap:10px;
+      margin-top:4px;
+    }
+
+    .choice{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      padding:15px 16px;
+      border:1px solid var(--line);
+      border-radius:16px;
+      background:#fff;
+      cursor:pointer;
+      transition:.2s ease;
+    }
+
+    .choice:hover{
+      border-color:rgba(111,126,97,.45);
+    }
+
+    .choice input{
+      width:18px;
+      height:18px;
+      accent-color:var(--olive);
+      flex:0 0 auto;
+    }
+
+    .submit-btn{
+      width:100%;
+      margin-top:24px;
+      padding:16px 22px;
+      border-radius:999px;
+      color:#fff;
+      background:var(--olive);
+      cursor:pointer;
+      font-weight:500;
+      transition:.2s ease;
+    }
+
+    .submit-btn:hover{
+      background:var(--olive-dark);
+      transform:translateY(-1px);
+    }
+
+    .submit-btn:disabled{
+      opacity:.6;
+      cursor:wait;
+      transform:none;
+    }
+
+    .form-message{
+      min-height:22px;
+      margin-top:14px;
+      color:#a54b4b;
+      font-size:13px;
+      text-align:center;
+    }
+
+    .success-box{
+      padding:30px 18px 12px;
+      text-align:center;
+    }
+
+    .success-box .heart{
+      margin-bottom:10px;
+      color:var(--olive);
+      font-family:'Playfair Display',serif;
+      font-size:42px;
+    }
+
+    .success-box h3{
+      font-family:'Playfair Display',serif;
+      font-size:30px;
+      font-weight:400;
+    }
+
+    .success-box p{
+      margin-top:10px;
+      color:var(--muted);
+      font-size:14px;
+    }
+
+    .honeypot{
+      position:absolute!important;
+      left:-9999px!important;
+      width:1px!important;
+      height:1px!important;
+      opacity:0!important;
+      pointer-events:none!important;
+    }
+
+    .footer-note{
+      margin-top:56px;
+      color:var(--muted);
+      font-size:12px;
+      text-align:center;
+      letter-spacing:.08em;
+    }
+
+    .reveal{
+      opacity:0;
+      transform:translateY(24px);
+      transition:opacity .8s ease,transform .8s ease;
+    }
+
+    .reveal.show{
+      opacity:1;
+      transform:none;
+    }
+
+    @media (max-width:760px){
+      section{
+        padding:72px 18px;
+      }
+
+      .invitation-card{
+        padding:48px 24px;
+      }
+
+      .invitation-copy{
+        font-size:16px;
+        line-height:1.75;
+      }
+
+      .details-card{
+        padding:42px 24px;
+      }
+
+      .rsvp-card{
+        padding:30px 20px;
+      }
+    }
+
+    @media (max-width:390px){
+      .guest-greeting{
+        font-size:36px;
+      }
+
+      .color{
+        width:39px;
+        height:39px;
+      }
+    }
+
+    @media (prefers-reduced-motion:reduce){
+      html{
+        scroll-behavior:auto;
+      }
+
+      *,
+      *::before,
+      *::after{
+        animation:none!important;
+        transition:none!important;
+      }
+
+      .reveal{
+        opacity:1;
+        transform:none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+<div class="page">
+
+  <section class="invitation" id="invitation">
+    <div class="container reveal">
+      <div class="invitation-card">
+        <div class="monogram">СА</div>
+
+        <div class="eyebrow">
+          Наша свадьба
+        </div>
+
+        <h2 class="guest-greeting">
+          Дорогие гости!
+        </h2>
+
+        <p class="invitation-copy">
+          До нашей свадьбы остаётся совсем немного, и мы уже с нетерпением ждём этого дня.
+          Нам будет очень приятно разделить его с вами.
+          Пожалуйста, ознакомьтесь с небольшими деталями ниже и просим заранее подтвердить своё присутствие.
+        </p>
+
+        <div class="signature">
+          Станислав & Алина
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="details-section center" id="details">
+    <div class="container reveal">
+      <div class="eyebrow">
+        Несколько слов
+      </div>
+
+      <h2>
+        Детали
+      </h2>
+
+      <div class="details-card">
+        <div class="monogram">СА</div>
+
+        <p class="details-text">
+        Ваше присутствие в этот день — уже самый важный подарок для нас.
+        Поэтому вместо цветов будем рады бутылочке хорошего алкоголя или подарочному сертификату для создания уюта в нашем доме
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="rsvp-section center" id="rsvp">
+    <div class="container reveal">
+      <div class="eyebrow">
+        Нам важно знать
+      </div>
+
+      <h2>
+        Подтверждение присутствия
+      </h2>
+
+      <p class="lead">
+        Пожалуйста, укажите ваше имя и сообщите, сможете ли вы быть с нами.
+      </p>
+
+      <div class="rsvp-card">
+        <form id="rsvpForm" novalidate>
+          <label class="field-label" for="guestName">
+            Ваше имя
+          </label>
+
+          <input
+            class="text-input"
+            id="guestName"
+            autocomplete="given-name"
+            placeholder="Например: Анна">
+
+          <span class="field-label">
+            Сможете ли вы присутствовать?
+          </span>
+
+          <div class="choices">
+            <label class="choice">
+              <input type="radio" name="attendance" value="Да">
+              <span>Да</span>
+            </label>
+
+            <label class="choice">
+              <input type="radio" name="attendance" value="Нет">
+              <span>Нет</span>
+            </label>
+          </div>
+
+          <label class="field-label" for="comment">
+            Комментарий
+            <span style="font-weight:300;color:var(--muted)">
+              (необязательно)
+            </span>
+          </label>
+
+          <textarea
+            id="comment"
+            maxlength="500"
+            placeholder="Если хотите что-то добавить"></textarea>
+
+          <input
+            class="honeypot"
+            id="company"
+            name="company"
+            type="text"
+            tabindex="-1"
+            autocomplete="off"
+            aria-hidden="true">
+
+          <button
+            class="submit-btn"
+            id="submitBtn"
+            type="submit">
+            Отправить ответ
+          </button>
+
+          <div
+            class="form-message"
+            id="formMessage"
+            role="status"
+            aria-live="polite"></div>
+        </form>
+
+        <div
+          class="success-box"
+          id="successBox"
+          hidden>
+          <div class="heart">
+            ♡
+          </div>
+
+          <h3>
+            Спасибо за ответ!
+          </h3>
+
+          <p id="successText">
+            Мы получили ваше подтверждение.
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-note">
+        Станислав & Алина · 03.10.2026
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<script>
+const RSVP_ENDPOINT =
+    "https://script.google.com/macros/s/AKfycbxvQlX4cW6_H_YlJ_3dYrZknzcZaUagxVJ2BhpM8LCEHL_A3ZaL5ojcd2PW7axNvFDc/exec";
+
+  const form = document.getElementById("rsvpForm");
+  const submitBtn = document.getElementById("submitBtn");
+  const formMessage = document.getElementById("formMessage");
+  const successBox = document.getElementById("successBox");
+  const successText = document.getElementById("successText");
+
+  const revealElements = document.querySelectorAll(".reveal");
+
+  if("IntersectionObserver" in window){
+    const revealObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting){
+          entry.target.classList.add("show");
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    },{
+      threshold:.12
+    });
+
+    revealElements.forEach(el => revealObserver.observe(el));
+  }else{
+    revealElements.forEach(el => el.classList.add("show"));
+  }
+
+  form.addEventListener("submit", async event => {
+    event.preventDefault();
+
+    formMessage.textContent = "";
+
+    if(document.getElementById("company").value){
+      return;
+    }
+
+    const guestName = document.getElementById("guestName").value.trim();
+    const attendance = document.querySelector('input[name="attendance"]:checked');
+    const comment = document.getElementById("comment").value.trim().slice(0, 500);
+
+    if(!guestName){
+      formMessage.textContent = "Пожалуйста, укажите ваше имя.";
+      document.getElementById("guestName").focus();
+      return;
+    }
+
+    if(!attendance){
+      formMessage.textContent = "Пожалуйста, выберите «Да» или «Нет».";
+      return;
+    }
+
+    const willAttend = attendance.value === "Да";
+
+    const payload = {
+      invitationId: "",
+      invited: [guestName],
+      attending: willAttend ? [guestName] : [],
+      absent: willAttend ? [] : [guestName],
+      guestsCount: willAttend ? 1 : 0,
+      status: willAttend ? "Придёт" : "Не придёт",
+      comment,
+      page: window.location.href.split("#")[0],
+      submittedAt: new Date().toISOString()
+    };
+
+    if(
+      !RSVP_ENDPOINT ||
+      RSVP_ENDPOINT.includes("PASTE_YOUR")
+    ){
+      formMessage.textContent =
+        "Форма ещё не подключена к обработчику RSVP. Вставьте URL в RSVP_ENDPOINT.";
+      return;
+    }
+
+    submitBtn.disabled = true;
+    submitBtn.textContent = "Отправляем…";
+
+    try{
+      await fetch(RSVP_ENDPOINT,{
+        method:"POST",
+        mode:"no-cors",
+        headers:{
+          "Content-Type":"text/plain;charset=utf-8"
+        },
+        body:JSON.stringify(payload)
+      });
+
+      form.hidden = true;
+      successBox.hidden = false;
+
+      successText.textContent = willAttend
+        ? "Спасибо! Будем очень рады видеть вас 3 октября 🤍"
+        : "Спасибо, что сообщили. Мы получили ваш ответ 🤍";
+
+    }catch(error){
+      console.error(error);
+
+      formMessage.textContent =
+        "Не удалось отправить ответ. Попробуйте ещё раз чуть позже.";
+
+    }finally{
+      submitBtn.disabled = false;
+      submitBtn.textContent = "Отправить ответ";
+    }
+  });
+</script>
+
+</body>
+</html>
